@@ -46,12 +46,13 @@ export const CardsGridContainer = styled.div`
 export const SlickDiv = styled.div`
   overflow: hidden;
   outline: none;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   width: 100%;
   height: 100%;
   .slick-dots {
-    bottom: -146px;
+    bottom: 10px;
     li button:before {
+      color: ${colors.gray12};
     }
   }
   /* .slick-slide {
@@ -68,8 +69,10 @@ export const CardContainer = styled.div`
   /* padding: 0px 15px; */
   :hover {
     /* box-shadow: 0 20px 18px 0; */
-    -webkit-box-shadow: 1px 12px 8px 7px rgba(0, 0, 0, 0.32);
-    box-shadow: 1px 12px 8px 7px rgba(0, 0, 0, 0.32);
+    /* -webkit-box-shadow: 1px 12px 8px 7px rgba(0, 0, 0, 0.32);
+    box-shadow: 1px 12px 8px 7px rgba(0, 0, 0, 0.32); */
+    -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     transform: scale(1.01);
     img {
       transform: scale(1.2);
@@ -79,7 +82,7 @@ export const CardContainer = styled.div`
 
 export const CardUpperPart = styled.div`
   width: 100%;
-  height: 274px;
+  /* height: 274px; */
   overflow: hidden;
   img {
     transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),

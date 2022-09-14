@@ -14,7 +14,7 @@ export const Blog = () => {
     infinite: true,
     speed: 1000,
     arrows: false,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 7000,
@@ -22,19 +22,19 @@ export const Blog = () => {
       {
         breakpoint: 1700,
         settings: {
-          slidesToShow: 5,
+          slidesToShow: 4,
         },
       },
       {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 5,
-        },
-      },
-      {
-        breakpoint: 900,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 720,
+        settings: {
+          slidesToShow: 2,
         },
       },
       {
@@ -56,7 +56,39 @@ export const Blog = () => {
       monthDetail: " September, 15 2017",
     },
     {
+      IconSrc: CardIcon2,
+      miniHeading: "Bitcoin",
+      mainHeading: "The LH-Crypto project has reached $7 000 000!",
+      cardDetail:
+        " The meetings will take place in the following cities: 15 January – Milan, 16 January – Lugano, 17 January – Zurich, 18 Jan",
+      monthDetail: " September, 15 2017",
+    },
+    {
+      IconSrc: CardIcon3,
+      miniHeading: "ICO",
+      mainHeading: "New trends in UI/UX Design World Integration",
+      cardDetail:
+        " Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for",
+      monthDetail: " September, 15 2017",
+    },
+    {
+      IconSrc: CardIcon4,
+      miniHeading: "Blockchain",
+      mainHeading: "The LH-Crypto project has reached $7 000 000!",
+      cardDetail:
+        "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for",
+      monthDetail: " September, 15 2017",
+    },
+    {
       IconSrc: CardIcon1,
+      miniHeading: "Cryptocurrency",
+      mainHeading: "New trends in UI/UX Design World Integration",
+      cardDetail:
+        "Specially for our VIP customers the LH Crypto team representatives Alexander Smirnov and Antonis Lapos will conduct a number of",
+      monthDetail: " September, 15 2017",
+    },
+    {
+      IconSrc: CardIcon2,
       miniHeading: "Cryptocurrency",
       mainHeading: "New trends in UI/UX Design World Integration",
       cardDetail:
@@ -72,7 +104,7 @@ export const Blog = () => {
       monthDetail: " September, 15 2017",
     },
     {
-      IconSrc: CardIcon1,
+      IconSrc: CardIcon2,
       miniHeading: "Cryptocurrency",
       mainHeading: "New trends in UI/UX Design World Integration",
       cardDetail:
@@ -80,35 +112,19 @@ export const Blog = () => {
       monthDetail: " September, 15 2017",
     },
     {
-      IconSrc: CardIcon1,
-      miniHeading: "Cryptocurrency",
-      mainHeading: "New trends in UI/UX Design World Integration",
+      IconSrc: CardIcon4,
+      miniHeading: "Blockchain",
+      mainHeading: "The LH-Crypto project has reached $7 000 000!",
       cardDetail:
-        "Specially for our VIP customers the LH Crypto team representatives Alexander Smirnov and Antonis Lapos will conduct a number of",
+        "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for",
       monthDetail: " September, 15 2017",
     },
     {
-      IconSrc: CardIcon1,
-      miniHeading: "Cryptocurrency",
-      mainHeading: "New trends in UI/UX Design World Integration",
+      IconSrc: CardIcon2,
+      miniHeading: "Bitcoin",
+      mainHeading: "The LH-Crypto project has reached $7 000 000!",
       cardDetail:
-        "Specially for our VIP customers the LH Crypto team representatives Alexander Smirnov and Antonis Lapos will conduct a number of",
-      monthDetail: " September, 15 2017",
-    },
-    {
-      IconSrc: CardIcon1,
-      miniHeading: "Cryptocurrency",
-      mainHeading: "New trends in UI/UX Design World Integration",
-      cardDetail:
-        "Specially for our VIP customers the LH Crypto team representatives Alexander Smirnov and Antonis Lapos will conduct a number of",
-      monthDetail: " September, 15 2017",
-    },
-    {
-      IconSrc: CardIcon1,
-      miniHeading: "Cryptocurrency",
-      mainHeading: "New trends in UI/UX Design World Integration",
-      cardDetail:
-        "Specially for our VIP customers the LH Crypto team representatives Alexander Smirnov and Antonis Lapos will conduct a number of",
+        " The meetings will take place in the following cities: 15 January – Milan, 16 January – Lugano, 17 January – Zurich, 18 Jan",
       monthDetail: " September, 15 2017",
     },
   ];
@@ -126,32 +142,26 @@ export const Blog = () => {
           className="carousel"
         > */}
             {CardDetails.map((card: any, index: number) => (
-              <div
-                key={index}
-                style={{ padding: "0px 15px", background: "green" }}
-              >
-                <Styled.CardContainer>
-                  <Styled.CardUpperPart>
-                    <Icon
-                      src={card.IconSrc}
-                      alt="cardImg"
-                      width="100%"
-                      height="100%"
-                    />
-                  </Styled.CardUpperPart>
-                  <Styled.CardLowerPart>
-                    <Styled.CardMiniHeading>
-                      {card.miniHeading}
-                    </Styled.CardMiniHeading>
-                    <Styled.CardMainHeading>
-                      {card.mainHeading}
-                    </Styled.CardMainHeading>
-                    <Styled.CardDetail>{card.cardDetail}</Styled.CardDetail>
-                    <Styled.CardMonthDetail>
-                      {card.monthDetail}
-                    </Styled.CardMonthDetail>
-                  </Styled.CardLowerPart>
-                </Styled.CardContainer>
+              <div key={index}>
+                <div style={{ padding: "0 15px", paddingBottom: "3rem" }}>
+                  <Styled.CardContainer>
+                    <Styled.CardUpperPart>
+                      <Icon src={card.IconSrc} alt="cardImg" width="100%" />
+                    </Styled.CardUpperPart>
+                    <Styled.CardLowerPart>
+                      <Styled.CardMiniHeading>
+                        {card.miniHeading}
+                      </Styled.CardMiniHeading>
+                      <Styled.CardMainHeading>
+                        {card.mainHeading}
+                      </Styled.CardMainHeading>
+                      <Styled.CardDetail>{card.cardDetail}</Styled.CardDetail>
+                      <Styled.CardMonthDetail>
+                        {card.monthDetail}
+                      </Styled.CardMonthDetail>
+                    </Styled.CardLowerPart>
+                  </Styled.CardContainer>
+                </div>
               </div>
             ))}
             {/* <Styled.CardContainer>

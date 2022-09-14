@@ -8,7 +8,7 @@ export const Container = styled.div`
   place-items: center;
   padding: 40px 15px;
   @media (min-width: ${screenSizes.L}px) {
-    height: 100vh;
+    height: 100%;
   }
 `;
 
@@ -31,6 +31,7 @@ export const SlickDiv = styled.div`
   .slick-dots {
     bottom: -84px;
     li button:before {
+      color: ${colors.gray12};
     }
   }
   .slick-slider {

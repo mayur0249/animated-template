@@ -17,19 +17,7 @@ export const PageGridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 40px;
-  .carousel {
-    height: 100%;
-    button.rec-dot {
-      background-color: ${colors.gray11};
-      box-shadow: none;
-    }
-    button.rec-dot_active {
-      background-color: ${colors.gray12};
-      width: 11px;
-      height: 11px;
-    }
-  }
-  /* place-items: center; */
+  place-items: center;
 `;
 
 export const MainHeading = styled.h2`
@@ -55,12 +43,29 @@ export const CardsGridContainer = styled.div`
   }
 `;
 
+export const SlickDiv = styled.div`
+  overflow: hidden;
+  outline: none;
+  border: 2px solid red;
+  width: 100%;
+  height: 100%;
+  .slick-dots {
+    bottom: -146px;
+    li button:before {
+    }
+  }
+  /* .slick-slide {
+    margin: 0 10px;
+  } */
+`;
+
 export const CardContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   place-items: start;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  /* padding: 0px 15px; */
   :hover {
     /* box-shadow: 0 20px 18px 0; */
     -webkit-box-shadow: 1px 12px 8px 7px rgba(0, 0, 0, 0.32);
@@ -70,38 +75,6 @@ export const CardContainer = styled.div`
       transform: scale(1.2);
     }
   }
-  margin: 10px;
-
-  /* :nth-child(1) {
-    display: none;
-  } */
-
-  /* @media (max-width: ${screenSizes.L}px) {
-    :nth-child(1) {
-      display: none;
-    }
-    :nth-child(2) {
-      display: none;
-    }
-    :nth-child(3) {
-      display: none;
-    }
-    :nth-child(4) {
-      display: none;
-    }
-    :nth-child(5) {
-      display: none;
-    }
-    :nth-child(6) {
-      display: none;
-    }
-    :nth-child(7) {
-      display: none;
-    }
-    :nth-child(8) {
-      display: none;
-    }
-  } */
 `;
 
 export const CardUpperPart = styled.div`

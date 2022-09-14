@@ -5,30 +5,35 @@ export const Container = styled.div`
   height: 100%;
   background: ${colors.white};
   display: grid;
-  /* place-items: center; */
+  place-items: center;
   padding: 40px 15px;
   @media (min-width: ${screenSizes.L}px) {
-    font-size: 100vh;
+    height: 100vh;
   }
 `;
 
 export const GridContainer = styled.div`
-  max-width: 1170px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 40px;
-  /* place-items: center; */
-  .carousel {
-    button.rec-dot {
-      background-color: ${colors.gray11};
-      box-shadow: none;
+  place-items: center;
+`;
+
+export const SlickDiv = styled.div`
+  max-width: 1200px;
+  min-height: 521px;
+  width: 100%;
+  overflow: hidden;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  .slick-dots {
+    bottom: -84px;
+    li button:before {
     }
-    button.rec-dot_active {
-      background-color: ${colors.gray12};
-      width: 11px;
-      height: 11px;
-    }
+  }
+  .slick-slider {
   }
 `;
 
@@ -70,6 +75,11 @@ export const SingleCardGridContainer = styled.div`
   grid-template-columns: 1fr;
   grid-gap: 30px;
   place-items: center;
+`;
+
+export const FlexBox = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 export const CardDetail = styled.p`
